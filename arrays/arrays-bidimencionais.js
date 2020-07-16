@@ -48,3 +48,66 @@ let numbers = negativeNumbers.concat(0, positiveNumbers);
  *
  * @param x array of numbers
  */
+const isEven = x => x % 2 === 0
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+/** iterando com o método every
+ * 
+ * Retornará false, pois o primeiro item do array é 1 e isso parará a execução
+ */
+numbers.every(isEven)
+
+/**
+ * Iterando com o método some
+ * Contrário do método every, parará no 2, que é o primeiro true
+ */
+numbers.some(isEven)
+
+/**
+ * Iterando com forEach
+ */
+numbers.forEach(number => console.log(isEven(number)));
+
+/**
+ * Iterando utilizando o map
+ * retornará um novo array com os valores false e true
+ */
+const myMap = numbers.map(isEven)
+
+/**
+ * Iterando utilizando o filter
+ * retornará apenas os true nesse caso
+ * [2, 4, 6, 8....]
+ */
+const evenNumbers = numbers.filter(isEven)
+
+/**
+ * Iterando com o reduce
+ * retornará a soma do array
+ */
+
+numbers.reduce((previous, current) => previous + current)
+/**
+ * Iterando utilizando for of
+ */
+for (const n of numbers) {
+  console.log(n % 2 === 0 ? 'even' : 'odd')
+}
+
+/**
+ * Utilizando o método @@iterator 
+ */
+let iterator = numbers[Symbol.iterator]()
+
+console.log(iterator.next().value) //1
+console.log(iterator.next().value) //2
+console.log(iterator.next().value) //3
+console.log(iterator.next().value) //4
+console.log(iterator.next().value) //5
+
+iterator = numbers[Symbol.iterator]()
+for (const n of iterator) {
+  console.log(n)
+}
+
+
