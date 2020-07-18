@@ -197,3 +197,26 @@ function compare(a, b) {
 }
 numbers.sort(compare)
 
+/** ordenação personalizada
+ * 
+ * ordenando pessoas pela idade
+ */
+
+const friends = [
+  { name: 'John', age: 30 },
+  { name: 'Ana', age: 20 },
+  { name: 'Chris', age: 25 },
+]
+function comparePerson(a, b) {
+  if (a.age < b.age) {
+    return -1
+  }
+  if (a.age > b.age) {
+    return 1
+  }
+  return 0
+} // retornara Ana(20), Chris(25), John(30)
+
+/** ORDENANDO STRINGS */
+
+
