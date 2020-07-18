@@ -219,4 +219,23 @@ function comparePerson(a, b) {
 
 /** ORDENANDO STRINGS */
 
+let names = ['Ana', 'ana', 'john', 'John']
+console.log(names.sort()) // [Ana, John, ana, John]
+// ocorre pq o js compara os caracteres com base na tabela ASCII
 
+console.log(names.sort((a, b) => {
+  if (a.toLowerCase() < b.toLowerCase()) {
+    return -1
+  }
+  if (a.toLowerCase() > b.toLowerCase()) {
+    return 1
+  }
+  return 0
+}))
+
+// se quisermos que as letras minisculas venham antes
+names.sort((a, b) => a.localeCompare(b)) // [ana, Ana, john, John]
+
+// para caracteres com acendo utilizar localeCompare também
+const names2 = ['Maève', 'Maeve']
+console.log(names2.sort((a, b) => a.localeCompare(b))) // [Maeve, Maève]
