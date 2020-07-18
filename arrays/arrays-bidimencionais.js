@@ -167,3 +167,13 @@ numbersCopy.fill(1, 3, 5) // [0,2,2,1,1,2]
 // inicializando um array e inserindo valores
 let ones = Array(6).fill(1)
 
+/**
+ * Método copyWithin
+ * permite copiar uma sequencia de valores de um array
+ */
+let copyArray = [1, 2, 3, 4, 5, 6]
+copyArray.copyWithin(0, 3)
+// copiar os valores 4 e 5 (posições 3 e 4) para as posições 1 e 2
+copyArray = [1, 2, 3, 4, 5, 6]
+copyArray.copyWithin(1, 3, 5) // [1,4,5,4,5,6]
+
