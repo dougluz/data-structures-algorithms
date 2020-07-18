@@ -125,5 +125,13 @@ for (const n of aEntries) {
 }
 
 /**
- * Método Keys devolve @@iterator
+ * Método Keys devolve @@iterator que contém chaves do array
  */
+const aKeys = numbers.keys();
+console.log(aKeys.next()) // { value: 0, done: false}
+console.log(aKeys.next()) // { value: 1, done: false}
+console.log(aKeys.next()) // { value: 2, done: false}
+
+
+
+
