@@ -177,3 +177,23 @@ copyArray.copyWithin(0, 3)
 copyArray = [1, 2, 3, 4, 5, 6]
 copyArray.copyWithin(1, 3, 5) // [1,4,5,4,5,6]
 
+/** ORDENANDO ELEMENTOS */
+
+numbers.reverse() // ira reverter a ordem do array
+
+numbers.sort(); // resultado sera [1,10,11,12,14.....2, 3, 4]
+
+numbers.sort((a, b) => a - b)
+
+// o codigo anterior tambem pode ser representado por
+function compare(a, b) {
+  if (a < b) {
+    return -1
+  }
+  if (a > b) {
+    return 1
+  }
+  return 0
+}
+numbers.sort(compare)
+
