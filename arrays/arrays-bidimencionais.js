@@ -140,6 +140,14 @@ let numbers2 = Array.from(numbers)
 // mapeando para retornar apenas os valores que deseja
 let evens = Array.from(numbers, x => (x % 2 == 0))
 
+/**
+ * Método from cria um array a partir dos argumentos passados
+ */
+let numbers3 = Array.of(1)
+let numbers4 = Array.of(1, 2, 3, 4, 5, 6)
+// mesmo que
+numbers3 = [1]
+numbers4 = [1, 2, 3, 4, 5, 6]
 
-
-
+// também é possivel utilizar esse método para copiar outro array por ex
+let numbersCopy = Array.of(...numbers4)
