@@ -110,4 +110,20 @@ for (const n of iterator) {
   console.log(n)
 }
 
+/**
+ * Método entries
+ */
+let aEntries = numbers.entries()
+console.log(aEntries.next().value) // [0, 1] - posição 0 valor 1
+console.log(aEntries.next().value) // [1, 2] - posição 1 valor 2
+console.log(aEntries.next().value) // [2, 3] - posição 2 valor 3
 
+
+aEntries = numbers.entries()
+for (const n of aEntries) {
+  console.log(n);
+}
+
+/**
+ * Método Keys devolve @@iterator
+ */
