@@ -151,3 +151,19 @@ numbers4 = [1, 2, 3, 4, 5, 6]
 
 // também é possivel utilizar esse método para copiar outro array por ex
 let numbersCopy = Array.of(...numbers4)
+
+/**
+ * método fill preenche um array com sos parametros passados
+ */
+numbersCopy = Array.of(1, 2, 3, 4, 5, 6)
+
+numbersCopy.fill(0) // [0,0,0,0,0,0]
+
+// também é possivel passar um indice de inicio para o preenchimento
+numbersCopy.fill(2, 1) // [0,2,2,2,2,2]
+
+numbersCopy.fill(1, 3, 5) // [0,2,2,1,1,2]
+
+// inicializando um array e inserindo valores
+let ones = Array(6).fill(1)
+
