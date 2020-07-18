@@ -132,6 +132,14 @@ console.log(aKeys.next()) // { value: 0, done: false}
 console.log(aKeys.next()) // { value: 1, done: false}
 console.log(aKeys.next()) // { value: 2, done: false}
 
+/**
+ * Método from cria outro array a partir de um array existente
+ */
+let numbers2 = Array.from(numbers)
+
+// mapeando para retornar apenas os valores que deseja
+let evens = Array.from(numbers, x => (x % 2 == 0))
+
 
 
 
