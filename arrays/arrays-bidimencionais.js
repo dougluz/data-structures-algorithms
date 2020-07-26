@@ -251,10 +251,30 @@ console.log(numbers.lastIndexOf(100))
 
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
-/** Metodos find e findIndex */
+/** Metodos find e findIndex 
+ * 
+ * Os metodos find e findindex irao receber uma funcao de callback
+ * que buscara um valor que satisfaça a condicao presente na funcao de callback
+ * 
+*/
 function multipleOf13(element, index, array) {
   return (element % 13 == 0)
 }
 
+// devolve o primeiro valor
 console.log(numbers.find(multipleOf13));
+
+// devolve o indice do primeiro valor que satisfaça a condição
 console.log(numbers.findIndex(multipleOf13))
+
+/** método includes
+ * 
+ * retorna true se encontrar e false se nao encontrar
+ */
+console.log(numbers.includes(15))
+console.log(numbers.includes(20))
+
+// definindo indice de inicio de onde a pesquisa deve começar
+let numbers2 = [7, 6, 5, 4, 3, 2, 1]
+console.log(numbers2.includes(4, 5))
+
