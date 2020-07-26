@@ -239,3 +239,22 @@ names.sort((a, b) => a.localeCompare(b)) // [ana, Ana, john, John]
 // para caracteres com acendo utilizar localeCompare também
 const names2 = ['Maève', 'Maeve']
 console.log(names2.sort((a, b) => a.localeCompare(b))) // [Maeve, Maève]
+
+/** PESQUISA */
+
+console.log(numbers.indexOf(10));
+console.log(numbers.indexOf(100));
+
+numbers.push(10)
+console.log(numbers.lastIndexOf(10))
+console.log(numbers.lastIndexOf(100))
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+/** Metodos find e findIndex */
+function multipleOf13(element, index, array) {
+  return (element % 13 == 0)
+}
+
+console.log(numbers.find(multipleOf13));
+console.log(numbers.findIndex(multipleOf13))
